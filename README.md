@@ -1,6 +1,9 @@
 # The Lepidopteran hitchhiker's guide to the globe
 "The lepidopteran hitchhiker’s guide to the globe: the spread and dispersal of non-native Lepidoptera" code repository.
+
 Original source:
+
+The data needed for this project can be obtained from the original source Supplementary Materials section.
 
 # Invasion Drivers and Distribution Analysis of Lepidoptera
 
