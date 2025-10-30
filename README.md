@@ -101,7 +101,7 @@ pip install pandas pycirclize matplotlib numpy plotly
 ```
 Appendix2_DistributionData.xlsx
 ```
-> ⚠️ Ensure this file is in the same directory as the Python script.
+> ⚠️ This dataset must be in the same directory as the Python script.
 
 ---
 
