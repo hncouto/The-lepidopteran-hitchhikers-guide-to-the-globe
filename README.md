@@ -18,7 +18,7 @@ The repository includes 2 scripts:
 | Language | File | Purpose |
 |-----------|------|----------|
 | **R** | `Model.R` | Model the drivers of invasion and establishment for *Total Lepidoptera*, *Moths*, and *Butterflies*. |
-| **Python** | `TablesCirclize.py` | Extract visualizations and extract information on the prevalence of the species and affected regions. |
+| **Python** | `Figures.py` | Extract visualizations and extract information on the prevalence of the species and affected regions. |
 
 ---
 
@@ -28,22 +28,29 @@ The repository includes 2 scripts:
 
 #### Required Libraries
 ```r
+
+broom.mixed
+bruceR
+dplyr
+DHARMa
+forcats
 glmmTMB
 usdm
 zoo
 MuMIn
+
 ```
 
 Install with:
 ```r
-install.packages(c("glmmTMB", "usdm", "zoo", "MuMIn"))
+install.packages(c("broom.mixed", "bruceR", "dplyr", "DHARMa", "forcats", "glmmTMB", "usdm", "zoo", "MuMIn"))
 ```
 
 #### Required Data
 ```
 Appendix1_CountryData.csv
 ```
-> ⚠️ This dataset must be in the same directory as the R script.
+> ⚠️ This dataset can be found as well as an Appendix of the paper: (#REF)
 
 ---
 
@@ -75,10 +82,14 @@ Identify the **drivers of invasion and establishment** for:
 | Target Group | Model Family Function | Objective |
 |-------|------|----------|
 | `Total Lepidoptera` | Negative binomial distribution: quadratic parameterization | Number of Establishments. |
-| `Moths` | Negative binomial distribution: quadratic parameterization | Number of Establishments. |
 | `Butterflies` | Binomial Distribution | Presence or Absence. |
+| `Moths -  Total` | Negative binomial distribution: quadratic parameterization | Number of Establishments. |
+| `Moths - Macro-moths` | Negative binomial distribution: quadratic parameterization | Number of Establishments. |
+| `Moths - Micro-moths` | Negative binomial distribution: quadratic parameterization | Number of Establishments. |
 
 Model Results can be seen on **[3.4]** 
+
+Extration of Model Results for forest plot on **[3.5]**
 
 ---
 
@@ -93,6 +104,7 @@ pycirclize
 matplotlib
 numpy
 plotly
+
 ```
 
 Install them with:
@@ -103,8 +115,11 @@ pip install pandas pycirclize matplotlib numpy plotly
 #### Required Data
 ```
 Appendix2_DistributionData.xlsx
+models_data.csv
 ```
-> ⚠️ This dataset must be in the same directory as the Python script.
+> ⚠️ Appendix2_DistributionData.xlsx dataset can be found as well as an Appendix of the paper: (#REF)
+> ⚠️ models_data.csv dataset is extracted from Model.R
+
 
 ---
 
@@ -114,7 +129,8 @@ Extract **summaries** and **visual insights** on:
 - Most affected regions  
 - Most prevalent introduced Lepidoptera species
 - Flows of invasion
-- Temporal patterns of invasion and establishment  
+- Temporal patterns of invasion and establishment
+- Forest Plot for the model results  
 
 ---
 
@@ -123,26 +139,33 @@ Extract **summaries** and **visual insights** on:
 #### [0] Imports
 - Import necessary libraries and data.
 
-#### [1] Regions Analysis
-- **[1.0]** Data preparation.  
-- **[1.1]** Identify most prevalent species amongst:
-  - Total Lepidoptera  
-  - Moths  
-  - Butterflies  
-- **[1.2]** Identify most invaded regions for each group.
+#### [1] Temporal Analysis
+- **[1.0]** Prepare tables for temporal study.  
+- **[1.1]** Analyze global invasion trends for each group.
+- **[1.2]** Perform continent-level temporal analysis. 
 
-#### [2] Flow Analysis
-- **[2.0]** Create pivot tables by group for flow analysis.  
-- **[2.1]** Create the script for chord diagrams using `pycirclize`.  
-- **[2.2]** Plot the invasion flows for each group.
+#### [2] Regions Analysis
+- **[2.0]** Data preparation.  
+- **[2.1]** Identify most prevalent species amongst:
+  - Total Lepidoptera    
+  - Butterflies
+  - All Moths
+      - Macro-moths
+      - Micro-moths  
+- **[2.2]** Identify most invaded regions for each group.
 
-#### [3] Temporal Analysis
-- **[3.0]** Prepare tables for temporal study.  
-- **[3.1]** Analyze global invasion trends for each group.
-- **[3.2]** Perform continent-level temporal analysis.  
-
-#### [4] Histograms
+#### [3] Histograms 
 - Generate histograms summarizing the number of records per region for each group.
+
+#### [4] Flow Analysis
+- **[4.0]** Create pivot tables by group for flow analysis.  
+- **[4.1]** Create the script for chord diagrams using `pycirclize`.  
+- **[4.2]** Plot the invasion flows for each group.
+
+#### [5] Histograms
+- **[5.1]** Data Preparation
+- **[5.2]** Plot the Forest Plot for the model results.
+
 
 ---
 
@@ -155,7 +178,7 @@ Extract **summaries** and **visual insights** on:
 
 ### Python Script:
 - Summary tables for species prevalence and invaded regions  
-- Visualizations (e.g., chord diagrams, temporal trends and histograms)  
+- Visualizations (e.g., chord diagrams, temporal trends, histograms and forest plots)  
 
 ---
 
