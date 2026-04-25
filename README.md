@@ -42,7 +42,7 @@ MuMIn
 
 Install with:
 ```r
-install.packages(c("broom.mixed", "bruceR", "dplyr", "DHARMa", "forcats", "glmmTMB", "usdm", "zoo", "MuMIn"))
+install.packages(c("broom.mixed", "bruceR", "dplyr", "forcats", "glmmTMB", "usdm", "zoo", "MuMIn"))
 ```
 
 #### Required Data
