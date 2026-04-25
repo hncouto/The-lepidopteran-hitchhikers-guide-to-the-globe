@@ -32,7 +32,6 @@ The repository includes 2 scripts:
 broom.mixed
 bruceR
 dplyr
-DHARMa
 forcats
 glmmTMB
 usdm
