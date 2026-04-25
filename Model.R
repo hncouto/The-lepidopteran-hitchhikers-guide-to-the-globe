@@ -2,7 +2,6 @@
 library(broom.mixed)
 library(bruceR)
 library(dplyr)
-library(DHARMa)
 library(forcats)
 library(glmmTMB)
 library(MuMIn)
@@ -139,29 +138,19 @@ GLMMMiMoth_MinMax <- glmmTMB(Micro.MothsIntSp ~ Island +
 
 # [3.4] Show Results
 summary(GLMM_FULL_MinMax)
-simulationOutput_FULL <- simulateResiduals(fittedModel = GLMM_FULL_MinMax, plot = F)
-plot(simulationOutput_FULL)
 performance::check_collinearity(GLMM_FULL_MinMax)
 
 summary(GLMMBF_MinMax_bin)
-simulationOutput_BF <- simulateResiduals(fittedModel = GLMMBF_MinMax_bin, plot = F)
-plot(simulationOutput_BF)
 performance::check_collinearity(GLMMBF_MinMax_bin)
 
 summary(GLMMMoth_MinMax)
-simulationOutput_Moth <- simulateResiduals(fittedModel = GLMMMoth_MinMax, plot = F)
-plot(simulationOutput_Moth)
 performance::check_collinearity(GLMMMoth_MinMax)
 
 summary(GLMMMaMoth_MinMax)
-simulationOutput_MaMoth <- simulateResiduals(fittedModel = GLMMMaMoth_MinMax, plot = F)
-plot(simulationOutput_MaMoth)
-performance::check_collinearity(simulationOutput_MaMoth)
+performance::check_collinearity(GLMMMaMoth_MinMax)
 
 summary(GLMMMiMoth_MinMax)
-simulationOutput_MiMoth <- simulateResiduals(fittedModel = GLMMMiMoth_MinMax, plot = F)
-plot(simulationOutput_MiMoth)
-performance::check_collinearity(simulationOutput_MiMoth)
+performance::check_collinearity(GLMMMiMoth_MinMax)
 
 
 # [3.5] Extract Model Results with 95% CI
