@@ -63,9 +63,9 @@ fig_total.update_layout(
         showgrid=False),
     template="plotly_white",
     legend=dict(x=0.05, y=0.95))
-#fig_total.update_layout(showlegend=False)
+fig_total.update_layout(showlegend=False)
 fig_total.show()
-#fig_total.write_image(r"../FirstRecords_Total.png", width=1000, height=400, scale=2)
+fig_total.write_image(r"../FirstRecords_Total.png", width=1000, height=400, scale=2)
 
 # [1.1.2] Butterflies
 df_BF = Arrivals_df_BF.dropna(subset=["First Record"]).copy()
@@ -103,9 +103,9 @@ fig_BF.update_layout(
         showgrid=False),
     template="plotly_white",
     legend=dict(x=0.05, y=0.95))
-#fig_BF.update_layout(showlegend=False)
+fig_BF.update_layout(showlegend=False)
 fig_BF.show()
-#fig_BF.write_image(r"../FirstRecords_Butterflies.png", width=1000, height=400, scale=2)
+fig_BF.write_image(r"../FirstRecords_Butterflies.png", width=1000, height=400, scale=2)
 
 # [1.1.3] Moths
 df_Moth = Arrivals_df_Moth.dropna(subset=["First Record"]).copy()
@@ -143,9 +143,9 @@ fig_Moth.update_layout(
         showgrid=False),
     template="plotly_white",
     legend=dict(x=0.05, y=0.95))
-#fig_Moth.update_layout(showlegend=False)
+fig_Moth.update_layout(showlegend=False)
 fig_Moth.show()
-#fig_Moth.write_image(r"Figures/FirstRecords_Moths.png", width=1000, height=400, scale=2)
+fig_Moth.write_image(r"../FirstRecords_Moths.png", width=1000, height=400, scale=2)
 
 # [1.1.3.1] Micro-moths
 df_MiMoth = Arrivals_df_MiMoth.dropna(subset=["First Record"]).copy()
@@ -183,9 +183,9 @@ fig_MiMoth.update_layout(
         showgrid=False),
     template="plotly_white",
     legend=dict(x=0.05, y=0.95))
-#fig_MiMoth.update_layout(showlegend=False)
+fig_MiMoth.update_layout(showlegend=False)
 fig_MiMoth.show()
-#fig_MiMoth.write_image(r"../FirstRecords_MicroMoths.png", width=1000, height=400, scale=2)
+fig_MiMoth.write_image(r"../FirstRecords_MicroMoths.png", width=1000, height=400, scale=2)
 
 # [1.1.3.2] Macro-moths
 df_MaMoth = Arrivals_df_MaMoth.dropna(subset=["First Record"]).copy()
@@ -223,9 +223,9 @@ fig_MaMoth.update_layout(
         showgrid=False),
     template="plotly_white",
     legend=dict(x=0.05, y=0.95))
-#fig_MaMoth.update_layout(showlegend=False)
+fig_MaMoth.update_layout(showlegend=False)
 fig_MaMoth.show()
-#fig_MaMoth.write_image(r"../FirstRecords_MacroMoths.png", width=1000, height=400, scale=2)
+fig_MaMoth.write_image(r"../FirstRecords_MacroMoths.png", width=1000, height=400, scale=2)
 
 # [1.1.4] Combined Figure
 
