@@ -1,7 +1,7 @@
 # The Lepidopteran hitchhiker's guide to the globe
 "The lepidopteran hitchhiker’s guide to the globe: the spread and dispersal of non-native Lepidoptera" code repository.
 
-Original source:
+Original source: Couto, H., Rebelo, R., Grosso-Silva, J., Cardoso, P., Capinha, C. (2026). The lepidopteran hitchhiker’s guide to the globe: the spread and dispersal of non-native moths and butterflies. Global Ecology and Biogeography. 
 
 The data needed for this project can be obtained from the original source Supplementary Materials section.
 
@@ -49,7 +49,7 @@ install.packages(c("broom.mixed", "bruceR", "dplyr", "forcats", "glmmTMB", "usdm
 ```
 Appendix1_CountryData.csv
 ```
-> ⚠️ This dataset can be found as well as an Appendix of the paper: (#REF)
+> ⚠️ This dataset can be found as well as a Supplementary Material of the paper in the original source.
 
 ---
 
@@ -116,7 +116,7 @@ pip install pandas pycirclize matplotlib numpy plotly
 Appendix2_DistributionData.xlsx
 models_data.csv
 ```
-> ⚠️ Appendix2_DistributionData.xlsx dataset can be found as well as an Appendix of the paper: (#REF)
+> ⚠️ Appendix2_DistributionData.xlsx dataset can be found as well as an Supplementary Material of the paper in the original source.
 > ⚠️ models_data.csv dataset is extracted from Model.R
 
 
@@ -202,4 +202,5 @@ Extract **summaries** and **visual insights** on:
 
 ## Acknowledgments
 
+We would like to thank André Calado, Claudia Gomes and João Neto for support during the data collection process, to Rebecca Pabst for assistance in data analysis, to Dr. Regan Early for making available the data on countries’ biological invasions’ detection capacity, to Dr. Michael Braby, Dr Carlos Lopez Vaamonde, Dr. Richard Mally, Dr. Yi-Bo Zhang and Peilin Wang for all the help on revising the data. CC acknowledges the support of the Portuguese Foundation for Science and Technology (FCT) through InvaSTOP project grant (https://doi.org/10.54499/2023.12533.PEX) and funds to CEG/IGOT Research Unit (UIDB/00295/2020 and UIDP/00295/2020). HC is funded by a grant (2022.14512.BD) financed by FCT (https://doi.org/10.54499/2022.14512.BD). This work received support from CE3C (https://doi.org/10.54499/UIDB/00329/2025), and CHANGE (https://doi.org/10.54499/la/p/0121/2020).
 
