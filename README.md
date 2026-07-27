@@ -1,3 +1,5 @@
+<a href="https://doi.org/10.5281/zenodo.21620831"><img src="https://zenodo.org/badge/1086422220.svg" alt="DOI"></a>
+
 # The Lepidopteran hitchhiker's guide to the globe
 "The lepidopteran hitchhiker’s guide to the globe: the spread and dispersal of non-native Lepidoptera" code repository.
 
