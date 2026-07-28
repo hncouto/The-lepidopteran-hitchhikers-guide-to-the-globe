@@ -49,7 +49,7 @@ install.packages(c("broom.mixed", "bruceR", "dplyr", "forcats", "glmmTMB", "usdm
 
 #### Required Data
 ```
-Appendix1_CountryData.csv
+SupplementaryMaterial1_CountryData.csv
 ```
 > ⚠️ This dataset can be found as well as a Supplementary Material of the paper in the original source.
 
@@ -115,10 +115,10 @@ pip install pandas pycirclize matplotlib numpy plotly
 
 #### Required Data
 ```
-Appendix2_DistributionData.xlsx
+SupplementaryMaterial2_DistributionData.xlsx
 models_data.csv
 ```
-> ⚠️ Appendix2_DistributionData.xlsx dataset can be found as well as an Supplementary Material of the paper in the original source.
+> ⚠️SupplementaryMaterial2_DistributionData.xlsx dataset can be found as well as an Supplementary Material of the paper in the original source.
 > ⚠️ models_data.csv dataset is extracted from Model.R
 
 

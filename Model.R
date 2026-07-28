@@ -8,10 +8,10 @@ library(MuMIn)
 library(usdm)
 library(zoo)
 
-Appendix1_CountryData <- read.csv("Raw Data/Appendix1_CountryData.csv", sep =",")
+SupplementaryMaterial1_CountryData <- read.csv("Supplementary Materials/SupplementaryMaterial1_CountryData.csv", sep =",")
 
 # [1] Data Preparation
-FinalData <- Appendix1_CountryData
+FinalData <- SupplementaryMaterial1_CountryData
 FinalData_clean <- FinalData[!is.na(FinalData$InvBias_SC), ]
 FinalData_clean <- na.omit(FinalData_clean)
 

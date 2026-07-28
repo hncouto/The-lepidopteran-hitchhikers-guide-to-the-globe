@@ -12,8 +12,8 @@ import numpy as np
 import plotly
 
 # [0.2] Data
-Arrivals_df = pd.read_excel(r'Raw Data/Appendix2_DistributionData.xlsx', 2)
-Departure_df = pd.read_excel(r'Raw Data/Appendix2_DistributionData.xlsx', 3)
+Arrivals_df = pd.read_excel(r'Supplementary Materials/SupplementaryMaterial2_DistributionData.xlsx', 2)
+Departure_df = pd.read_excel(r'Supplementary Materials/SupplementaryMaterial2_DistributionData.xlsx', 3)
 Arrivals_df['First Record'] = Arrivals_df['First_Record']
 Arrivals_df.drop('First_Record', axis=1, inplace=True)
 ModelResults_df = pd.read_csv(r'Updated Data/models_data.csv')
@@ -65,7 +65,7 @@ fig_total.update_layout(
     legend=dict(x=0.05, y=0.95))
 fig_total.update_layout(showlegend=False)
 fig_total.show()
-fig_total.write_image(r"../FirstRecords_Total.png", width=1000, height=400, scale=2)
+#fig_total.write_image(r"../FirstRecords_Total.png", width=1000, height=400, scale=2)
 
 # [1.1.2] Butterflies
 df_BF = Arrivals_df_BF.dropna(subset=["First Record"]).copy()
@@ -105,7 +105,7 @@ fig_BF.update_layout(
     legend=dict(x=0.05, y=0.95))
 fig_BF.update_layout(showlegend=False)
 fig_BF.show()
-fig_BF.write_image(r"../FirstRecords_Butterflies.png", width=1000, height=400, scale=2)
+#fig_BF.write_image(r"../FirstRecords_Butterflies.png", width=1000, height=400, scale=2)
 
 # [1.1.3] Moths
 df_Moth = Arrivals_df_Moth.dropna(subset=["First Record"]).copy()
@@ -145,7 +145,7 @@ fig_Moth.update_layout(
     legend=dict(x=0.05, y=0.95))
 fig_Moth.update_layout(showlegend=False)
 fig_Moth.show()
-fig_Moth.write_image(r"../FirstRecords_Moths.png", width=1000, height=400, scale=2)
+#fig_Moth.write_image(r"../FirstRecords_Moths.png", width=1000, height=400, scale=2)
 
 # [1.1.3.1] Micro-moths
 df_MiMoth = Arrivals_df_MiMoth.dropna(subset=["First Record"]).copy()
@@ -185,7 +185,7 @@ fig_MiMoth.update_layout(
     legend=dict(x=0.05, y=0.95))
 fig_MiMoth.update_layout(showlegend=False)
 fig_MiMoth.show()
-fig_MiMoth.write_image(r"../FirstRecords_MicroMoths.png", width=1000, height=400, scale=2)
+#fig_MiMoth.write_image(r"../FirstRecords_MicroMoths.png", width=1000, height=400, scale=2)
 
 # [1.1.3.2] Macro-moths
 df_MaMoth = Arrivals_df_MaMoth.dropna(subset=["First Record"]).copy()
@@ -225,7 +225,7 @@ fig_MaMoth.update_layout(
     legend=dict(x=0.05, y=0.95))
 fig_MaMoth.update_layout(showlegend=False)
 fig_MaMoth.show()
-fig_MaMoth.write_image(r"../FirstRecords_MacroMoths.png", width=1000, height=400, scale=2)
+#fig_MaMoth.write_image(r"../FirstRecords_MacroMoths.png", width=1000, height=400, scale=2)
 
 # [1.1.4] Combined Figure
 
@@ -381,7 +381,7 @@ fig_combined.update_layout(showlegend=True,
                            legend=dict(x=0.05, y=-0.15))
 
 fig_combined.show()
-fig_combined.write_image(r"Figures/FirstRecords_Combined.png", width=1000, height=900, scale=2)
+#fig_combined.write_image(r"../FirstRecords_Combined.png", width=1000, height=900, scale=2)
 
 # [1.2] By Continent
 df_africa = Arrivals_df.dropna(subset=["First Record"]).copy()
@@ -483,7 +483,7 @@ fig_continents_cumulative.update_layout(
     template="plotly_white",
     legend=dict(x=0.05, y=0.95))
 fig_continents_cumulative.show()
-fig_continents_cumulative.write_image(r"Figures/FirstRecords_Continents.png", width=1000, height=400, scale=2)
+#fig_continents_cumulative.write_image(r"../FirstRecords_Continents.png", width=1000, height=400, scale=2)
 
 
 # [2] Regions Analysis
@@ -618,7 +618,7 @@ hists.update_xaxes(title_text="Number of Regions", row=1, col=2)
 hists.update_xaxes(title_text="Number of Regions", row=1, col=3)
 hists.update_yaxes(title_text="Number of Species", row=1, col=1)
 hists.show()
-hists.write_image(r"Figures/Histograms.png", width=900, height=400, scale=2)
+#hists.write_image(r"../Histograms.png", width=900, height=400, scale=2)
 
 
 # [4] Flow Analysis
@@ -771,7 +771,7 @@ circos_continental_directional_MaMoth = Circos.initialize_from_matrix(
 circos_continental_directional_MaMoth.plotfig()
 plt.title("Macro-moths", fontsize=18, weight="bold", pad=20)
 plt.show()
-circos_continental_directional_MaMoth.savefig("Figures/Circos_continental_directional_MaMoth.png", dpi=300)
+#circos_continental_directional_MaMoth.savefig(r"../Circos_continental_directional_MaMoth.png", dpi=300)
 
 
 # [5] Model Forest Plots
@@ -881,4 +881,4 @@ forest_plot.update_layout(
     font=dict(family="Arial, sans-serif"))
 
 forest_plot.show()
-forest_plot.write_image("Figures/ForestPlot.png", width=1000, height=400, scale=2)
+#forest_plot.write_image(r"../ForestPlot.png", width=1000, height=400, scale=2)
