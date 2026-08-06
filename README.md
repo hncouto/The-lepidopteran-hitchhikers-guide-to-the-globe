@@ -3,7 +3,7 @@
 # The Lepidopteran hitchhiker's guide to the globe
 "The lepidopteran hitchhiker’s guide to the globe: the spread and dispersal of non-native Lepidoptera" code repository.
 
-Original source: Couto, H., Rebelo, R., Grosso-Silva, J., Cardoso, P., Capinha, C. (2026). The lepidopteran hitchhiker’s guide to the globe: the spread and dispersal of non-native moths and butterflies. Global Ecology and Biogeography. 
+Original source: Couto, H., Rebelo, R., Grosso-Silva, J., Cardoso, P., Capinha, C. (2026). The lepidopteran hitchhiker’s guide to the globe: the spread and dispersal of non-native moths and butterflies. Global Ecology and Biogeography. 35, 8: e70292. https://doi.org/10.1111/geb.70292
 
 The data needed for this project can be obtained from the original source Supplementary Materials section.
 
